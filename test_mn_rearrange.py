@@ -1,0 +1,26 @@
+from twist import mn_rearrange
+from data_process import readdata
+twist_data = readdata("result.dat1")
+theta_array, m1_array, n1_array, m2_array, n2_array, point_distance_array = mn_rearrange(twist_data)
+print(len(theta_array))
+for i in range(len(theta_array)):
+    print(theta_array[i],end=" ")
+    print(m1_array[i],end=" ")
+    print(n1_array[i],end=" ")
+    print(m2_array[i],end=" ")
+    print(n2_array[i],end=" ")
+    print(point_distance_array[i],end=" ")
+    print("")
+output = open('./result.dat3',mode = 'w')
+print("theta    m1    n1    m2    n2    point_distance",file = output)
+output.close()
+output = open('./result.dat3',mode = 'a')
+for i in range(len(theta_array)):
+    print(theta_array[i],file=output,end=" ")
+    print(m1_array[i],file=output,end=" ")
+    print(n1_array[i],file=output,end=" ")
+    print(m2_array[i],file=output,end=" ")
+    print(n2_array[i],file=output,end=" ")
+    print(point_distance_array[i],file=output,end=" ")
+    print("",file=output)
+output.close()

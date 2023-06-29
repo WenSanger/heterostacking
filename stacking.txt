@@ -1,0 +1,2 @@
+twist_angle(бу)   AA/period_area           AB/period_area
+                 3.2186618308       0.06376360808693074       0.12498574712492422       
